@@ -11,7 +11,6 @@ namespace DungeonLibrary
         public Weapon EquippedWeapon { get; set; }
 
         //CONSTRUCTORS
-
         public Player(string name, int maxLife, int hitChance, int block, int life, Race characterRace, Weapon equippedWeapon)
             : base(name, maxLife, hitChance, block, life)
         {
@@ -25,7 +24,6 @@ namespace DungeonLibrary
         #endregion
 
         //METHODS
-
         public override string ToString()
         {
             return base.ToString() + "\nRace: " + CharacterRace +
