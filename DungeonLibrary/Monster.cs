@@ -4,6 +4,7 @@
     {
         //FIELDS
         private int _minDamage;
+        private int _affection;
 
         //PROPERTIES
         public int MaxDamage { get; set; }
@@ -23,14 +24,34 @@
                 }
             }
         }
+        public int Affection
+        {
+            get { return _affection; }
+            set
+            {
+                if (value <= 0 && value >= 100)
+                {
+                    _affection = value;
+                }
+                else if (value > 100)
+                {
+                    _affection = 100;
+                }
+                else
+                {
+                    _affection = 0;
+                }
+            }
+        }
 
         //CONSTRUCTORS
-        public Monster(string name, int maxLife, int hitChance, int block, int life, int maxDamage, int minDamage, string description)
+        public Monster(string name, int maxLife, int hitChance, int block, int life, int maxDamage, int minDamage, string description, int affection)
             : base(name, maxLife, hitChance, block, life)
         {
             MaxDamage = maxDamage;
             MinDamage = minDamage;
             Description = description;
+            Affection = affection;
         }
 
         //METHODS
@@ -44,6 +65,11 @@
         {
             Random rng = new Random();
             return rng.Next(MinDamage, MaxDamage + 1);
+        }
+
+        public virtual int CalcAffection()
+        {
+            return Affection;
         }
     }
 }
