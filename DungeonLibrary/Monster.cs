@@ -29,7 +29,7 @@
             get { return _affection; }
             set
             {
-                if (value <= 0 && value >= 100)
+                if (value >= 0 )
                 {
                     _affection = value;
                 }
@@ -57,8 +57,8 @@
         //METHODS
         public override string ToString()
         {
-            return base.ToString() + "\nDamage: " + MinDamage + " - " + MaxDamage +
-                "Description: " + Description;
+            return base.ToString() + "\nAffection: " + Affection + "\nDamage: " + MinDamage + " - " + MaxDamage +
+                "\nDescription: " + Description + "\n";
         }
 
         public override int CalcDamage()
@@ -69,7 +69,7 @@
 
         public virtual int CalcAffection()
         {
-            return Affection;
+            return 0;
         }
     }
 }

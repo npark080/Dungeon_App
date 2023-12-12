@@ -3,7 +3,7 @@
     public sealed class Frog : Monster
     {
         public bool Slimy { get; set; }
-        public bool Poisonous { get; set; }
+        public static bool Poisonous { get; set; }
 
         public Frog(string name, int hitChance, int block, int maxLife,
             int life, int maxDamage, int minDamage, string description, int affection, bool slimy, bool poisonous)
