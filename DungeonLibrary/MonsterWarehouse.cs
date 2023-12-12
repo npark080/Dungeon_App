@@ -4,7 +4,7 @@ namespace DungeonLibrary
 {
     public class MonsterWarehouse
     {
-        static void GetMonster()
+        public static void GetMonster()
         {
             Bee bee1 = new("Worker Bee", 90, 60, 15, 15, 15, 10, "Buzzing for a fight", 0, false);
             Bee bee2 = new("Babee", 80, 50, 10, 10, 12, 8, "A sweetie", 20, true);

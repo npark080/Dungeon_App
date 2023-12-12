@@ -3,7 +3,7 @@
     public sealed class Snake : Monster
     {
         public bool Rattle { get; set; }
-        public bool Poisonous { get; set; }
+        public static bool Poisonous { get; set; }
 
         public Snake(string name, int hitChance, int block, int maxLife,
             int life, int maxDamage, int minDamage, string description, int affection, bool rattle, bool poisonous)
